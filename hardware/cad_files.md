@@ -1,10 +1,10 @@
 ---
-title: Child of Test
-parent: Test
+title: CAD files
+parent: Hardware
 has_children: true
 nav_order: 1
 ---
 
-# Child of test
+# CAD Files
 
 I am a child page.
