@@ -5,4 +5,5 @@ description: >-
 github_username:  MarvinStuede
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "light"
+baseurl: /Sobi
 # logo: "/images/icon.png"
