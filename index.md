@@ -5,7 +5,7 @@ nav_order: 1
 ![Sobi-Header](/images/cmg_opening.jpg){:class="img-responsive"}
 <sub>Image copyright: Marie Luise Kolb</sub>
 ## Welcome to Sobi Documentation
-<img src="/images/person_front_left.png" alt="Person-front-left" width="450"/>
+<img src="/Sobi/images/person_front_left.png" alt="Person-front-left" width="450"/>
 
 You can use the [editor on GitHub](https://github.com/MarvinStuede/Sobi/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 

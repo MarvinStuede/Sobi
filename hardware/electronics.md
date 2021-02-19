@@ -8,4 +8,4 @@ nav_order: 1
 # Electronic devices and components
 
 ## General System Setup
-[ ![component_overview](/images/components_overview.png) ](/images/components_overview.png)
+[ ![component_overview](images/components_overview.png) ](/images/components_overview.png)
