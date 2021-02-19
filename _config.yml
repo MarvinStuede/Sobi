@@ -1,7 +1,8 @@
-title: "Sobi Documentation"
+title: "Sobi"
 email: Marvin.Stuede@imes.uni-hannover.de
 description: >-
   Documentation for the open source software and hardware robot Sobi
 github_username:  MarvinStuede
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "light"
+# logo: "/images/icon.png"

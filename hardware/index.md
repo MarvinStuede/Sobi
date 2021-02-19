@@ -5,3 +5,6 @@ nav_order: 2
 ---
 
 # Hardware
+
+## General System Setup
+![component_overview](/images/components_overview.png){:class="img-responsive"}
