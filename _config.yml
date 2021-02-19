@@ -1,3 +1,9 @@
-title: "Documentation for Open Source Project Sobi"
+title: "Sobi Documentation"
+email: Marvin.Stuede@imes.uni-hannover.de
+description: >- # this means to ignore newlines until "baseurl:"
+  Documentation for the open source software and hardware robot Sobi
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  MarvinStuede
 remote_theme: pmarsceill/just-the-docs
 color_scheme: "light"
