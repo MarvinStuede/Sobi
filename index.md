@@ -16,6 +16,6 @@ The entire project, i.e. the hardware and software design of the robot, is **ope
 <img src="/Sobi/images/person_front_left.png" alt="Person-front-left" width="450"/>
 
 ### Author
-- [Marvin Stüde](https://www.imes.uni-hannover.de/en/institute/team/m-sc-marvin-stuede/)
+[Marvin Stüde](https://www.imes.uni-hannover.de/en/institute/team/m-sc-marvin-stuede/)
 Email: <Marvin.Stuede@imes.uni-hannover.de>
 Papers: [Google Scholar](https://scholar.google.de/citations?user=UpE1ycMAAAAJ)
