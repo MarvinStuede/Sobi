@@ -23,7 +23,7 @@ All sensor data are provided in the ROS framework. It should be noted here that 
 | back camera   | /cam_back/color/image_raw       |[sensor_msgs/Image](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/Image.html) | RGB image of the back camera |
 | back camera (depth image)  | /cam_back/aligned_depth_to_color/image_raw  | [sensor_msgs/Image](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/Image.html)| Depth image of the back camera |
 | Back camera (point cloud)  | /cam_back/depth_registered/points | [sensor_msgs/PointCloud2](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/PointCloud2.html)| Registered (with color values) point cloud of the camera |
-| IMU   | /imu/data       | [sensor_msgs/Imu](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/Imu.html)| measurement values of the IMU      |
+| IMU   | /imu/data       | [sensor_msgs/Imu](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/Imu.html)| Measurement values of the IMU      |
 | Odometry   | /odometry/filtered        | [nav_msgs/odometry](http://docs.ros.org/melodic/api/nav_msgs/html/msg/Odometry.html)| Odometry filtered with the EKF |
 | Ultrasound    | /base/relayboard_v2/usboard/measurements        | [sensor_msgs/Range](http://docs.ros.org/melodic/api/sensor_msgs/html/msg/Range.html)| Values of all ultrasonic sensors |
 | Speed   | /cmd_vel      | [geometry_msgs/Twist](https://docs.ros.org/api/geometry_msgs/html/msg/Twist.html)| Target velocity is published to this topic      |

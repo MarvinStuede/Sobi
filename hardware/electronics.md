@@ -56,8 +56,7 @@ The following table describes the components in ascending order.
 
 | Sensor | Description |
 | -----  | ----------- |
-| 2D Laser Scanner |The 2D laser scanner (SICK S300) is primarily used for safety-related functions.
-It is a safety system decoupled from the ROS framework. Nevertheless, the laser scan data can be accessed in the ROS Framework. More about this in chapter [Communication structure of the robot](/cmrobot/communication_structure). |
+| 2D Laser Scanner |The 2D laser scanner (SICK S300) is primarily used for safety-related functions. It is a safety system decoupled from the ROS framework. Nevertheless, the laser scan data can be accessed in the ROS Framework. More about this in chapter [Communication structure of the robot](/cmrobot/communication_structure). |
 |Vecow EVS1000 |The embedded computer Vecow EVS 1000 is the main computer of the entire robot system. The Rosmaster of the entire communication system of the robot is executed on this computer.|
 |Tablet |The tablet is a Samsung Galaxy Tab A (10.1 inch, 2016), which is an interface between man and machine for the outside users of the robot system. |
 |Microphone |The microphone is an array microphone (ReSpeaker Mic Array v2). In addition to normal speech recognition, it can detect the direction from which the sound is coming via direction-of-arrival (function currently unused). Furthermore, algorithms like beamforming and static noise suppression are supported.  |
