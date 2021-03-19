@@ -57,6 +57,7 @@ In addition, the coordinate systems *odom* and *map* are necessary for navigatio
 The following figures show the basic coordinate systems on the robot.
 
 [ ![doku3](/Sobi/images/doku3.png) ](/Sobi/images/doku3.png)
+[ ![doku5](/Sobi/images/doku5.png) ](/Sobi/images/doku5.png)
 
 In the left figure, the map and odometry coordinate systems are on the *xy plane*. These are stationary, whereas the other coordinate systems are solid.
 The link between the stationary and body-fixed coordinate systems is the transformation between the *odom* and *base_link* coordinate systems.
