@@ -2,7 +2,7 @@
 title: CAD files
 parent: Hardware
 has_children: false
-nav_order: 3
+nav_order: 2
 ---
 # CAD Files
 [ ![cad_views](/Sobi/images/cad_views.png) ](/Sobi/images/cad_views.png)
