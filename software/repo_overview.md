@@ -1,7 +1,7 @@
 ---
 title: Repository overview
 parent: Software
-has_children: true
+has_children: false
 nav_order: 1
 ---
 
@@ -12,7 +12,7 @@ nav_order: 1
 ### [cmr_os](https://github.com/MarvinStuede/cmr_os)
 
 is the basic repository of the robot.  This repository includes all `.launch` files necessary to start the robot (sensors and actuators). The URDF model (`cmr_description`) is also located in this repository.
-Here, the transformations between the coordinate systems described on page [system communcation](404) (TODO) are defined. Also included are the package for running the Gazebo simulation (`cmr_gazebo`) and software interfaces for using the robot (`cmr_api`).
+Here, the transformations between the coordinate systems described on page [Sensor topics and transformations](/Sobi/software/Sensor_topics_and_transformations.html) are defined. Also included are the package for running the Gazebo simulation (`cmr_gazebo`) and software interfaces for using the robot (`cmr_api`).
 
 ### [cmr_msgs](https://github.com/MarvinStuede/cmr_msgs)
 
@@ -34,5 +34,13 @@ contains drivers to interface Sobi's LED-Panel and strips with the ROS Framework
 ### [cmr_localization](https://github.com/MarvinStuede/cmr_localization)
 
 contains starters and configuration to run RTAB-Map with Sobi. Also contains the map manager, which is further described [here](map_manager.html)
+
+### [cmr_lidarloop](https://github.com/MarvinStuede/cmr_lidarloop)
+
+a method to extend Graph based SLAM (ie. RTAB-Map) by Lidar based loop detection. [Documentation](lidarloop.html)
+
+### [cmr_people_perception](https://github.com/MarvinStuede/cmr_people_perception)
+
+people perception and tracking pipeline tailored to Sobi. The pipeline is heavily based on the [SPENCER Framework](https://github.com/spencer-project/spencer_people_tracking) and several State-of-the-art people detectors.
 
 ### Navigation and long term autonomy

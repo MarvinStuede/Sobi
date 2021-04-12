@@ -1,7 +1,7 @@
 ---
 title: CAD files
 parent: Hardware
-has_children: true
+has_children: false
 nav_order: 1
 ---
 # CAD Files
