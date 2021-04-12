@@ -33,7 +33,7 @@ contains drivers to interface Sobi's LED-Panel and strips with the ROS Framework
 ### Mapping, localization and perception
 ### [cmr_localization](https://github.com/MarvinStuede/cmr_localization)
 
-contains starters and configuration to run RTAB-Map with Sobi. Also contains the map manager, which is further described [here](map_manager.html)
+contains starters and configuration to run RTAB-Map with Sobi. Also contains the map manager, which is further described [here](map_manager.html).
 
 ### [cmr_lidarloop](https://github.com/MarvinStuede/cmr_lidarloop)
 
@@ -44,3 +44,6 @@ a method to extend Graph based SLAM (ie. RTAB-Map) by Lidar based loop detection
 people perception and tracking pipeline tailored to Sobi. The pipeline is heavily based on the [SPENCER Framework](https://github.com/spencer-project/spencer_people_tracking) and several State-of-the-art people detectors.
 
 ### Navigation and long term autonomy
+### [cmr_monitoring](https://github.com/MarvinStuede/cmr_monitoring)
+
+a framework to monitor system variables and ROS nodes. Based on the [https://github.com/luhrts/monitoring](monitoring ROS package) system errors (e.g. CPU or Network overloads) as well as unpingable Nodes and Topics out of tolerance bands can be detected and the recovery behaviors executed. Also contains a package to log ROS topics to a MongoDB.
