@@ -6,6 +6,21 @@ nav_order: 1
 ---
 # Parts list
 
+## Overall
+
+| Components |Total (Shipping included)|
+| ----     | ----     |
+| Sensors|7.650,52€|
+| Computers|3.771,75€|
+| Mechanical structure|1.978,64€|
+| Electrical components|1.246,35€|
+| Platform|31.123,66€|
+| User interface|276,95€|
+| Boards and controllers|199,80€|
+| Cover|9.982,33€|
+|**Total**   |**56.230€**   |
+
+
 ## Sensors
 
 | Image (Link)    | Name     | Type  | Price   | Quantity | Total (Shipping included)|
@@ -50,7 +65,7 @@ nav_order: 1
 
 | Image (Link)    | Name     | Type  | Price   | Quantity | Total (Shipping included)|
 | ----     | ----     | ----- | ------- | ----------- |----|
-|[<img src="parts_imgs/Lautsprecher.jpg">](https://www.amazon.de/Sony-tragbarer-Bluetooth-Lautsprecher-Spritzwassergesch%C3%BCtzt/dp/B07GTBRSCY/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Sony%2BSRS-XB01%2Btragbarer%2BBluetooth%2BLautsprecher&qid=1618306624&sr=8-3&th=1)   |Loudspeaker |       |27,00€ (31,98€ ?) |1 |27,00€ (31,98€ ?)|
+|[<img src="parts_imgs/Lautsprecher.jpg">](https://www.amazon.de/Sony-tragbarer-Bluetooth-Lautsprecher-Spritzwassergesch%C3%BCtzt/dp/B07GTBRSCY/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Sony%2BSRS-XB01%2Btragbarer%2BBluetooth%2BLautsprecher&qid=1618306624&sr=8-3&th=1)   |Loudspeaker |       |31,98€ |1 |31,98€ |
 |[<img src="parts_imgs/TPA3118 2.1.jpg">](https://www.amazon.de/KKmoon-TPA3118-Subwoofer-Leistung-DC12V-26V%C2%A1%C2%AD/dp/B01N3Z6FS0/ref=sr_1_3?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=TPA3118+2.1+Verst%C3%A4rker&qid=1618306255&sr=8-3)|TPA3118 2.1 Amplifier|       |18,89€ |1 |18,89€ |
 |          |Loudspeaker/Cable|       |33,49€ |1 |33,49€ |
 |          |WiFi Adapter|       |126,14€ |1 |126,14€ |
