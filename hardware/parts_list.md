@@ -79,7 +79,9 @@ nav_order: 1
 
 | Image (Link)    | Name     | Type  | Price   | Quantity | Total (Shipping included)|
 | ----     | ----     | ----- | ------- | ----------- |----|
-|[<img src="parts_imgs/MP-500.jpg">](https://www.neobotix-roboter.de/produkte/mobile-roboter/mobiler-roboter-mp-500#c1262)|Mobiler Roboter MP-500 |       |30.999,50€ |1 |30.999,50€ |
+|[<img src="parts_imgs/MP-500.jpg">](https://www.neobotix-roboter.de/produkte/mobile-roboter/mobiler-roboter-mp-500#c1262)|Mobile Robot MP-500 |       |26.715,50€ |1 |26.715,50€ |
+|[<img src="https://www.neobotix-robots.com/fileadmin/images/produkte/Optionen/Optionen-USBoard.jpg">](https://www.neobotix-robots.com/products/options)|Sonar Sensors an USBoard for MP-500 |       |1927,80€ |1 |1927,80€ |
+|[<img src="https://www.neobotix-roboter.de/fileadmin/images/produkte/Optionen/Option-Ladestation.jpg">](https://www.neobotix-robots.com/products/options)|Automatic Charging Station for MP-500 |       |2356,20 € |1 |2356,20€ |
 |[<img src="parts_imgs/q-batteries-12lcp-23-12v-23ah-blei-akku-zyklentyp-agm-deep-cycle-vrla.jpg">](https://www.online-batterien.de/shop/Q-Batteries-12LCP-23-12V-23Ah-Blei-Akku-Zyklentyp-AGM-Deep-Cycle-VRLA)          |Q-Batteries 12LCP-23 / 12V - 23Ah lead battery cycle type AGM - Deep Cycle VRLA|       |52,17€ |2 |124,16€ |
 |          |          |       |         |**Total**    |**31.123,66€** |
 
