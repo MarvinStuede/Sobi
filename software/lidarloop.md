@@ -8,10 +8,6 @@ nav_order: 3
 # Loop detection with cmr_lidarloop
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Co81uQPXvn8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
-
-### Citing
-TODO
-
 ### Introduction
 To develop autonomous mobile robots, the solution of the SLAM problem is essential. This describes the requirement to generate a map of the environment while determining the position. Robust methods for static environments have been explored in the past, but such an assumption has little in common with real sensory perception: objects move, seasons affect the appearance of the environment, and images of the same scene differ depending on illumination. Because Sobi's SLAM method RTAB-Map uses primarily visual data, places can rarely be recognized under dynamic lighting conditions. Laser scans are inherently illumination invariant, so more extensive use of this data is appropriate. The ROS package [cmr_lidarloop](https://github.com/MarvinStuede/cmr_lidarloop) has therefore been developed at imes as an extension to RTAB-Map for loop detection using LiDAR data.
 
@@ -303,3 +299,11 @@ $ rtabmap-databaseViewer rtabmap.db
 is generally suitable for viewing these results. Using View⇒Graph View, the generated map can be visualised, whereby all loop closures are also visualised. By selecting View⇒Constraints View, a visualisation of the individual loop pairs is possible, which is ideal for examining the added loops. If you move the slider at loop closure to the left, the loops closed by cmr_lidarloop (*4-user link*) are shown in addition to the loop closures of RTAB-Map (*1-loop closure, 2-space proximity link*). Here, the registration of the two scans is particularly interesting, as an incorrectly calculated transformation matrix can be recognized directly by incorrect alignment of the point clouds. In this case, the registration of the scan pair could be visualised again in the registration environment and a successful registration could be realised by parameter tuning. The display of the associated RGBD images also provides information whether the loop was detected correctly or incorrectly.
 
 Finally, it should be mentioned that the user has the possibility to adjust the most important parameters of cmr_lidarloop. For this purpose, the values in the parameter file (cfg/cmr_lidarloop_params.yaml) can be changed before starting the programm. A detailed description of the parameters is also available in this file.
+
+### Citing
+If you use this software for your research, please cite the following publication:
+```
+Have I been here before? Learning to Close the Loop with LiDAR Data in Graph-Based SLAM
+Habich, T.-L., Stuede, M., Labbé, M., Spindeldreier, S.
+IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM) 2021
+```
