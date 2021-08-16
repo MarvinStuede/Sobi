@@ -11,6 +11,7 @@ This chapter describes the general structure of the robot's hardware.
 The following figure shows a general overview of all hardware-related components of the robot:
 
 [ ![component_overview](/Sobi/images/components_overview.png) ](/Sobi/images/components_overview.png)
+[ ![component_overview_3d](/Sobi/images/Component_Render.png) ](/Sobi/images/Component_Render.png)
 
 The structure of the following section is divided into the subsections base, torso and head.
 

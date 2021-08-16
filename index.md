@@ -13,7 +13,7 @@ Since the project to develop Sobi started in 2018 and the robot has been designe
 The entire project, i.e. the hardware and software design of the robot, is **open source** and all components can be freely used. This documentation therefore contains both documentation on the hardware components, such as CAD files, circuit diagrams and parts lists, as well as descriptions of the software and algorithms.
 
 
-<img src="/Sobi/images/person_front_left.png" alt="Person-front-left" width="450"/>
+<img src="/Sobi/images/sobi_render_2.png" alt="Person-front-left" width="450"/>
 
 ### Video
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nn7P3g1jy2o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
