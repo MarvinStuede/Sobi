@@ -1,7 +1,7 @@
 ---
 title: Map Manager
 parent: Software
-has_children: true
+has_children: False
 nav_order: 2
 ---
 
@@ -14,19 +14,19 @@ Since Sobi has to operate in different environments on campus (e.g. indoor in co
 
 The chapter is divided into the following sections:
 
-1. [Basic principle of the Map Manager](mm_basic_principle.html)
+1. [Basic principle of the Map Manager](#basic-principle)
 
-2. [Mapping with the Map Manager on Sobi](mm_mapping.html)
+2. [Mapping with the Map Manager on Sobi](#mapping)
 
-3. [Automated mapping with the map manager](mm_auto_mapping.html)
+3. [Automated mapping with the map manager](#auto-mapping)
 
-4. [Saving the maps in .pgm and .yaml](mm_save_maps.html)
+4. [Saving the maps in .pgm and .yaml](#saving)
 
-5. [Visualization in Rviz](mm_visualization.html)
+5. [Visualization in Rviz](#visu)
 
-6. [Troubleshooting](mm_troubleshooting.html)
+6. [Troubleshooting](#trouble)
 
-## Basic principle of the Map Manager
+## Basic principle of the Map Manager {#basic-principle}
 
 Basically, the Map Manager is superior to the SLAM process (in this case RTAB-MAP). The algorithm, manages maps created by RTAB-MAP and connects them by link points. This ensures that the robot can later plan and navigate over multiple maps. Dividing the robot's operational area into multiple maps has the advantage that the robot can use different SLAM configurations for different environments (e.g. indoor/outdoor). Furthermore, smaller maps improve the map quality because RTAB-MAP has fewer nodes in the Long-Term-Memory (LTM) and thus a pre-selection of nodes that are eligible for loop closures is already made.
 In the following, the basic principle and operation of the Map Manager is explained. First, the topological graph structure is discussed, which can be abstracted from the arrangement of maps and link points. The gate detection and subsequent selection of the optimal SLAM configuration is also described. Then, the detection of topological loop closures by feature matching is explained. Finally, the tracking of the global robot position is described and the optimization of the topological graph after a loop closure.
@@ -42,7 +42,7 @@ Each map represents a room or outdoor area separated by doors. In Fig. 1, four m
 The mapping procedure for this example is as follows (the feature matching and door detection methods described here will be explained in more detail later).
 The start is on Map 0 after the robot has detected via laser scan data that the indoor configuration (small distances) should be used for RTAB-MAP. Then the robot drives in front of a door and sets a **Link-Point Candidat**, which is later important for the Loop-Closure and becomes the Link-Point L_3, as soon as the robot drives through the door there again from the other Map (3). Then the robot drives through the door on the other side of the room.  The robot recognizes that the door has been passed and ends the old Map 0 behind the door. The environment is checked by the laser scan data and the outdoor configuration is used. Then the mapping for a new map is started (Map 1). In the link point 1 both maps overlap. The robot moves over Map 1 and after it passes the door, it exits Map 1 and checks based on the camera data whether it has already been to this location (or whether this link point already exists) or not. Then it starts a new map in the indoor configuration. Another Link-Point Candidate is set and subsequently the door is passed in the direction of Map 3.  Link-Point 2 and Map 3 are also newly created. As soon as the robot passes the door from Map 3 to Map 0, this is automatically detected and it is checked whether the robot has already been at this location. Since the feature matching with the link point candidate set at the beginning provides a high match, the link point candidate is converted into a link point (L_3). Furthermore, no new map is started, but the old map (Map 0) is loaded again. After the robot has passed through the door towards map 2, the link point candidate is also converted into a real link point, so that the topological graph is now complete.
 
-### Door-Detection and selection of SLAM-Configuration:
+### Door-Detection and selection of SLAM-Configuration
 
 To detect the door, the laser scan data of the Velodyne VLP-16 is used. For this purpose, the PointCloud2 is converted to laser scan data (a 2D projection) using the ROS package [pointcloud_to_laserscan](http://wiki.ros.org/pointcloud_to_laserscan). The laser scan data (range) is then derived by the angle. To detect doors, large derivatives are searched for in the laser scan data at a given angle and distance. The door must be open for the derivative to be correspondingly large.
 
@@ -67,7 +67,7 @@ When the number of matching features (matches) exceeds a certain threshold, the 
 ### Global position tracking and topological graph optimization
 
 Until now, the robot has compared the current camera images with all existing link points and link point candidates. This costs time and is inefficient. To increase efficiency, the global position of the robot can be computed over multiple maps and consider only the link-point (candidates) that are within a search radius around the robot.
-To compute the global robot position, the relative positions of the maps to each other must be known. This can be calculated by the link points, since they describe the same position in the global coordinate system in the respective coordinate systems of the adjacent maps. Thus, a transformation between the two origins of the adjacent maps can be calculated. The shortest topological path between the world CS and the map origin in which the robot pose is calculated can be determined by Dijkstra's algorithm.  
+To compute the global robot position, the relative positions of the maps to each other must be known. This can be calculated by the link points, since they describe the same position in the global coordinate system in the respective coordinate systems of the adjacent maps. Thus, a transformation between the two origins of the adjacent maps can be calculated. The shortest topological path between the world CS and the map origin in which the robot pose is calculated can be determined by Dijkstra's algorithm.
 
 [ ![GrundprinzipDesMapManagers_Bild4](/Sobi/images/GrundprinzipDesMapManagers_Bild4.png) ](/Sobi/images/GrundprinzipDesMapManagers_Bild4.png)
 
@@ -77,7 +77,7 @@ Fig. 4 illustrates the chaining of multiple transformations and the associated v
 
 After a new loop closure is found, it is possible to use the additional topological information to optimize the graph with respect to the global positions. This is done with the C++ library [g2o (A General Framework for Graph Optimization)](https://openslam-org.github.io/g2o.html). This corrects the global positions of the link points and thus reduces the error due to the variance propagation.
 
-## Mapping with the Map Manager on Sobi
+## Mapping with the Map Manager on Sobi {#mapping}
 
 This article describes how mapping works with the Map Manager on the CMR. Since this is not the automated version, no doors are automatically detected and the link points and link point candidates have to be inserted manually by ROS service calls. The state machine for the mapping can be found in [sm_mapping.cpp ](https://phabricator.imes.uni-hannover.de/source/cmr_localization/browse/ehlers/map_manager/src/sm_mapping.cpp) in the package ''map_manager''. The parameters for the map manager can be set in [params.yaml](https://phabricator.imes.uni-hannover.de/source/cmr_localization/browse/ehlers/map_manager/cfg/params.yaml).
 
@@ -133,7 +133,7 @@ The following parameters can be set in [params.yaml](https://phabricator.imes.un
 
   * `record_imgs_and_pc:` boolean variable whether to record the images from the front and back camera to the link points or not. Additionally the point cloud is also recorded at a link point candidate. Only if the variable is set to true, the compatibility of the database to the automated approach is present.
 
-## Automated mapping with the Map Manager
+## Automated mapping with the Map Manager {#auto-mapping}
 
 This article describes how automated mapping with the Map Manager on the CMR works. In the automated variant, the passing of doors is automatically detected and the link points and link point candidates are automatically set by the algorithm. The state machine for the automated mapping can be found in [automated_sm_mapping.cpp](https://phabricator.imes.uni-hannover.de/source/cmr_localization/browse/ehlers/map_manager/src/automated_sm_mapping.cpp), in the package `map_manager`. The parameters for the map manager can be set in [params.yaml]( https://phabricator.imes.uni-hannover.de/source/cmr_localization/browse/ehlers/map_manager/cfg/params.yaml).
 
@@ -217,7 +217,7 @@ The following parameters can be set in [params.yaml](https://phabricator.imes.un
 
   * `low_pass_filter_size_env:` filter size for the average low-pass filter for the laser scan data.
 
-## Saving the maps in .pgm and .yaml
+## Saving the maps in .pgm and .yaml {#saving}
 
 This article describes how to save the corresponding .pgm and .yaml files based on the SQL databases created by RTAB-Map. In this procedure the conversion of the data has been automated. In principle, each individual database can also be manually converted to a .pgm and .yaml as described [here](https://answers.ros.org/question/217097/export-2d-map-from-rviz-andor-rtab-map/).
 
@@ -234,13 +234,13 @@ To store the .pgm and .yaml automatically for each map in the working directory 
 First start all nodes. Then enter the directory at the `save_map` node and wait until **"DONE, saved all maps!"** is displayed.
 After the ROS node `save_map` has iterated through all maps, all nodes can be turned off. Unfortunately, the commands have to be swapped out to three different nodes, otherwise automation in the code would not be possible. The saved .pgm and .yaml files can be found in the same directory as the SQL databases of RTAB-MAP.
 
-## Visualization in Rviz
+## Visualization in Rviz {#visu}
 
 With the help of the ROS node `rvizgraph` link points can be visualized in Rviz. To do this, the map manager must be running in mapping mode (as described in 3) and 4)). The node can be started by the command `rosrun map_manager rvizgraph`. It gets the current map ID via the ROS topic `/map_manager/cur_map_id`. This is necessary because the link points that are on the current map should be displayed in the map coordinate system. All other link points are represented in the world coordinate system, which is not as accurate.
 
 Therefore, the ROS node sends `visualization_msgs::Marker` on the topic `map_manager/local_linkpoints_rviz` or `map_manager/global_linkpoints_rviz`. These markers can be easily added in Rviz. It is important to note that the markers can only be seen if the coordinate systems `map` and `world` also exist, i.e. if RTAB-MAP and the state machine for the mapping are running properly.
 
-## Troubleshooting
+## Troubleshooting {#trouble}
 
 Here is a collection of problems that can occur in connection with the Map Manager and RTAB-MAP. This list will be extended continuously.
 

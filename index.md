@@ -15,6 +15,15 @@ The entire project, i.e. the hardware and software design of the robot, is **ope
 
 <img src="/Sobi/images/person_front_left.png" alt="Person-front-left" width="450"/>
 
+### Video
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nn7P3g1jy2o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+### Citing
+If you use this parts of this project for your research, please cite the following publication:
+```
+Sobi: An Interactive Social Service Robot for Long-Term Autonomy in Open Environments
+Stuede, M., Westermann, K., Schappler, M., Spindeldreier, S.
+10th European Conference on Mobile Robots (ECMR) 2021
+```
 ### Author
 [Marvin Stüde](https://www.imes.uni-hannover.de/en/institute/team/m-sc-marvin-stuede/)
 Email: <Marvin.Stuede@imes.uni-hannover.de>
