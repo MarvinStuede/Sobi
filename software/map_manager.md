@@ -33,7 +33,7 @@ In the following, the basic principle and operation of the Map Manager is explai
 
 ### Topological graph structure
 
-[ ![GrundprinzipDesMapManagers_Bild1](/Sobi/images/GrundprinzipDesMapManagers_Bild1.png) ](/Sobi/images/GrundprinzipDesMapManagers_Bild1.png)
+[ ![GrundprinzipDesMapManagers_Bild1](/Sobi/images/GrundprinzipDesMapManagers_Bild1.png)](/Sobi/images/GrundprinzipDesMapManagers_Bild1.png)
 
 **Fig. 1:** basic principle of the map manager with several maps connected by link points located in the overlapping area of two maps.
 
@@ -135,7 +135,7 @@ The following parameters can be set in [params.yaml](https://phabricator.imes.un
 
 ## Automated mapping with the Map Manager {#auto-mapping}
 
-This article describes how automated mapping with the Map Manager on the CMR works. In the automated variant, the passing of doors is automatically detected and the link points and link point candidates are automatically set by the algorithm. The state machine for the automated mapping can be found in [automated_sm_mapping.cpp](https://phabricator.imes.uni-hannover.de/source/cmr_localization/browse/ehlers/map_manager/src/automated_sm_mapping.cpp), in the package `map_manager`. The parameters for the map manager can be set in [params.yaml]( https://phabricator.imes.uni-hannover.de/source/cmr_localization/browse/ehlers/map_manager/cfg/params.yaml).
+This article describes how automated mapping with the Map Manager on the CMR works. In the automated variant, the passing of doors is automatically detected and the link points and link point candidates are automatically set by the algorithm. The state machine for the automated mapping can be found in automated_sm_mapping.cpp, in the package `map_manager`. The parameters for the map manager can be set in `params.yaml`.
 
 To start the automated mapping on the CMR, the following steps have to be executed in the console:
 
@@ -179,7 +179,7 @@ During use, the user is guided through the program with the help of text outputs
 
 ### Parameters for the Automated State Machine Mapping:
 
-The following parameters can be set in [params.yaml](https://phabricator.imes.uni-hannover.de/source/cmr_localization/browse/ehlers/map_manager/cfg/params.yaml).
+The following parameters can be set in `params.yaml`.
 
   * `config_criterion:` criterion according to which the SLAM configuration should be determined automatically.
 
@@ -197,7 +197,7 @@ The following parameters can be set in [params.yaml](https://phabricator.imes.un
 
 ### Parameters for the Environment Detector:
 
-The following parameters can be set in [params.yaml](https://phabricator.imes.uni-hannover.de/source/cmr_localization/browse/ehlers/map_manager/cfg/params.yaml).
+The following parameters can be set in `params.yaml`.
 
   * `feature_matching_thr:` required number of feature matches  to accept a loop closure.
 
