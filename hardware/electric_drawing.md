@@ -1,6 +1,6 @@
 ---
 title: Electrical diagrams
-has_children: true
+has_children: false
 parent: Hardware
 nav_order: 4
 ---
