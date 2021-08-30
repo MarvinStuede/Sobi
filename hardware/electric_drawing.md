@@ -33,4 +33,4 @@ The following EAGLE files are contained in a zip file, with schematics that can 
 - **Sob_Raspi_LED_Fan_Shield**: A shield for the Raspberry Pi 3 that holds a connector for the LED Panel and the two Servos that move the Ears
 
 Download the EAGLE files here:
-[EAGLE_Files.zip](/Sobi/download/ESP-MP-500-Sobi.pdf)
+[EAGLE_Files.zip](/Sobi/download/EAGLE_Files.zip)
