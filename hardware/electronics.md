@@ -11,14 +11,14 @@ This chapter describes the general structure of the robot's hardware.
 The following figure shows a general overview of all hardware-related components of the robot:
 
 [ ![component_overview](/Sobi/images/components_overview.png) ](/Sobi/images/components_overview.png)
-[ ![component_overview_3d](/Sobi/images/Component_Render.png) ](/Sobi/images/Component_Render.png)
+
 
 The structure of the following section is divided into the subsections base, torso and head.
 
 ## Sobi: Base
 Sobi's base consists of the Neobotix MP-500 mobile platform.
 
-{{cmrobot:base.png?240 }}\
+[ ![component_overview](/Sobi/images/base.png) ](/Sobi/images/base.png)
 
 The platform, shown here in blue, consists of two drive wheels and a running wheel.
 Both drive wheels have a motor, so that a pure rotation of the robot is possible.
@@ -28,9 +28,9 @@ For further information about the platform, we refer to the official documentati
 
   - [Neobotix MP-500 Documentation](https://docs.neobotix.de/display/MP500)
 
-{{cmrobot:sobi.png?240 }}\
+[ ![component_overview](/Sobi/images/Sobi_Front.png) ](/Sobi/images/Sobi_Front.png)
 
-In the figure on the left, the entire robot is shown.
+In this image, the entire robot is shown.
 A S300 2D safety laser scanner from SICK is attached to the bottom of the base.
 The laser sensor and the drives are a self-contained system, so that it can block or limit the drives independently of the overall (ROS) system.
 The sensor is divided into three detection areas, which are defined by the respective distance to the sensor. A distinction is made between the first detection range, in which there is no intervention in the drives.
@@ -40,17 +40,15 @@ The sensor data of the 2D laser sensor are available in the ROS framework, which
 **IMPORTANT**: The robot is powered at 24 V by four lead-acid batteries. This means that there is a permanent voltage at the batteries even if the robot is switched off!
 
 ## Sobi: Torso and head
-The torso and the head were designed by the Institute for Mechatronic Systems (imes). Inside them there are some components, which are shown in the following pictures.
+The torso and the head were designed by the Institute for Mechatronic Systems (imes). Inside them there are some components, which are shown in the following picture.
 
-{{cmrobot:sobit_front.png?300}}
-{{cmrobot:sobi_back.png?265}}
+[ ![component_overview_3d](/Sobi/images/Component_Render.png) ](/Sobi/images/Component_Render.png)
 
-The following table describes the components in ascending order.
 
 | Sensor | Description |
 | -----  | ----------- |
-| 2D Laser Scanner |The 2D laser scanner (SICK S300) is primarily used for safety-related functions. It is a safety system decoupled from the ROS framework. The data can also be accessed in the ROS framework |
-|Vecow EVS1000 |The embedded computer Vecow EVS 1000 is the main computer of the entire robot system. The Rosmaster of the entire communication system of the robot is executed on this computer.|
+| 2D Lidar |The 2D laser scanner (SICK S300) is primarily used for safety-related functions. It is a safety system decoupled from the ROS framework. The data can also be accessed in the ROS framework |
+|Embedded Computer Vecow EVS1000 |The embedded computer Vecow EVS 1000 is the main computer of the entire robot system. The Rosmaster of the entire communication system of the robot is executed on this computer.|
 |Tablet |The tablet is a Samsung Galaxy Tab A (10.1 inch, 2016), serves as an input devices for users of the robot. |
 |Microphone |The microphone is an array microphone (ReSpeaker Mic Array v2). In addition to normal speech recognition, it can detect the direction from which the sound is coming via direction-of-arrival (function currently unused). Furthermore, algorithms like beamforming and static noise suppression are supported.  |
 |RGBD cameras |Two RGB-D cameras (Intel Realsense D435) are mounted in the head of the robot. These are depth imaging cameras and thus provide a depth image in addition to the RGB image.  |
