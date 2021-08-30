@@ -2,7 +2,7 @@
 title: Design process
 parent: Hardware
 has_children: false
-nav_order: 4
+nav_order: 5
 ---
 # Design process
 Design developed by
