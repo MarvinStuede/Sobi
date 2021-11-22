@@ -18,7 +18,7 @@ The entire project, i.e. the hardware and software design of the robot, is **ope
 ### Video
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nn7P3g1jy2o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 ### Citing
-If you use this parts of this project for your research, please cite the following publication:
+If you use parts of this project for your research, please cite the following publication:
 ```
 Sobi: An Interactive Social Service Robot for Long-Term Autonomy in Open Environments
 Stuede, M., Westermann, K., Schappler, M., Spindeldreier, S.
